@@ -31,14 +31,16 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 100px;
+
 }
 
 .item {
@@ -59,19 +61,25 @@ header {
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+  
 }
 
 header nav ul li {
+  display: flex;
   list-style-type: none;
+  justify-content: center;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+
 }
 
 header nav ul li a:hover {
@@ -81,11 +89,13 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display: flex;
   border: 2px solid #ff385c;
   padding: 10px;
 }
 
 form label {
+  display: flex;
   font-weight: bold;
 }
 
@@ -117,3 +127,15 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+/* @media all and (min-width: 480px) {
+  
+  form {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 10px 0 10px;
+  }
+
+  form button {
+    margin-top: 
+    padding:
+  } */
