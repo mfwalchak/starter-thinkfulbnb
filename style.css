@@ -1,7 +1,8 @@
-/* -------  General Styles ------- */
+-------  General Styles -------
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&family=Lato&display=swap");
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: monospace;
 }
 
 h2 {
@@ -36,28 +37,20 @@ main img {
 
 /* ---  Groups & Items --- */
 
+
 .group {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 100px;
+  
+  /* flex-direction: column; */
 
 }
 
-.item {
-  flex: 1;
-  margin: 10px;
-}
 
-.item-double {
-  flex: 2;
-}
 
 /* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
-  text-align: center;
 }
 
 .logo {
@@ -66,20 +59,18 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
-  
 }
 
 header nav ul li {
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
-
 }
 
 header nav ul li a:hover {
@@ -90,19 +81,29 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 form {
   display: flex;
+  flex-direction: column;
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 20px 20px 10px 20px;
 }
 
-form label {
+form div {
   display: flex;
+  justify-content: space-between;
+}
+
+
+form label { 
+  /* width: 150px;
+  font-weight: bold;
+  margin: 10px; */
+  font-family: "Lato", sans-serif;
   font-weight: bold;
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
   width: 180px;
+  margin-bottom: 20px;
 }
 
 form button {
@@ -126,16 +127,85 @@ footer p {
   padding: 20px;
 }
 
-/* -------  Media Query ------- */
-/* @media all and (min-width: 480px) {
-  
-  form {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 10px 0 10px;
+/*(-------  Media Query -------*/
+@media all and (min-width: 480px) {
+  header,
+  header nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
   }
+  .logo {
+    width: 100%;
+    justify-content: start;
+  }
+  .group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
 
-  form button {
-    margin-top: 
-    padding:
-  } */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  flex wrap: wrap;
+}
+
+/* .gallery {
+  display: flex;
+  width: 100%;
+  height: 100%;
+} */
+
+.item {
+  flex: 2;
+  width: 30%;
+  margin: 10px;
+}
+
+.item-double {
+  display: flex;
+  flex: 4;
+  width: 60%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8);
+  grid-gap: 15px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+.one {
+  grid-column: 1 / 6;
+  grid-row: 2 / 3;
+}
+.two {
+  grid-column: 7 / 12;
+  grid-row: 1 / 4;
+}
+form button {
+  width: auto;
+  text-align: right;
+}
