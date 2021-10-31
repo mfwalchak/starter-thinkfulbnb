@@ -57,7 +57,7 @@ header {
   display: flex;
   justify-content: center;
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 18vw;
   color: #fff;
 }
 
@@ -83,7 +83,7 @@ form {
   display: flex;
   flex-direction: column;
   border: 2px solid #ff385c;
-  padding: 20px 20px 10px 20px;
+  padding:10px 0 0 5px;
 }
 
 form div {
@@ -103,7 +103,7 @@ form label {
 form select,
 form input {
   width: 180px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 form button {
@@ -140,6 +140,7 @@ footer p {
   .logo {
     width: 100%;
     justify-content: start;
+    font-size: 72px;
   }
   .group{
     display: flex;
@@ -148,6 +149,7 @@ footer p {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+   
 }
 
 .gallery {
@@ -205,7 +207,14 @@ footer p {
   grid-column: 7 / 12;
   grid-row: 1 / 4;
 }
+form label {
+  margin-right: 15px;
+}
+form input {
+  margin: 0 10px 0 0;
+}
 form button {
   width: auto;
   text-align: right;
+  margin: 0 10px 10px 10px;
 }
